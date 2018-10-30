@@ -1,5 +1,8 @@
 change_ip.sh --> set the local ip address for Lhost to 192.168.10.2
+
 commands.rb  --> used to run inside of the metasploit interperater on the exploited box
+used: run commands.rb
+
 hack.sh      --> used to automate the setup of the listener on the local machine 
 setup.sh     --> used to make the exploit file for the users machine
 
