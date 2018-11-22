@@ -21,7 +21,7 @@ echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 elif [ $1 = "-r" ] ; then 
   ifdown eth0
   ifup eth0
-  service apache2 restart
+  #service apache2 restart
   sleep 10
  # ipaddr=`ip addr | grep eth0 | grep inet|  awk '{print $2}'`
  # echo "ip address is : $ipaddr"

