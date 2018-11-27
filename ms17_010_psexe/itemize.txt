@@ -1,8 +1,0 @@
-
-turn off wifi 
-disable updates
-
-download windows 10 box from https://tb.rg-adguard.net/public.php
-setup student account on box
-turn off firewall??
-
